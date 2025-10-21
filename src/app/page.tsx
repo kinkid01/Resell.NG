@@ -43,11 +43,11 @@ export default function Home() {
             <Portal>
               <Menu.Positioner>
                 <Menu.Content>
-                  <Menu.Item value="new-txt">New Text File</Menu.Item>
-                  <Menu.Item value="new-file">New File...</Menu.Item>
-                  <Menu.Item value="new-win">New Window</Menu.Item>
-                  <Menu.Item value="open-file">Open File...</Menu.Item>
-                  <Menu.Item value="export">Export</Menu.Item>
+                  <Menu.Item value="new-txt">Airplane Tickets</Menu.Item>
+                  <Menu.Item value="new-file">Concert Tickets</Menu.Item>
+                  <Menu.Item value="new-win">Airtime</Menu.Item>
+                  <Menu.Item value="open-file">Train Tickets</Menu.Item>
+                  <Menu.Item value="export">Movies Tickets</Menu.Item>
                 </Menu.Content>
               </Menu.Positioner>
             </Portal>
@@ -69,11 +69,8 @@ export default function Home() {
             <Portal>
               <Menu.Positioner>
                 <Menu.Content>
-                  <Menu.Item value="new-txt">New Text File</Menu.Item>
-                  <Menu.Item value="new-file">New File...</Menu.Item>
-                  <Menu.Item value="new-win">New Window</Menu.Item>
-                  <Menu.Item value="open-file">Open File...</Menu.Item>
-                  <Menu.Item value="export">Export</Menu.Item>
+                  <Menu.Item value="new-txt">Default </Menu.Item>
+                  <Menu.Item value="new-file">Lowest to highest</Menu.Item>
                 </Menu.Content>
               </Menu.Positioner>
             </Portal>
@@ -95,11 +92,11 @@ export default function Home() {
             <Portal>
               <Menu.Positioner>
                 <Menu.Content>
-                  <Menu.Item value="new-txt">New Text File</Menu.Item>
-                  <Menu.Item value="new-file">New File...</Menu.Item>
-                  <Menu.Item value="new-win">New Window</Menu.Item>
-                  <Menu.Item value="open-file">Open File...</Menu.Item>
-                  <Menu.Item value="export">Export</Menu.Item>
+                  <Menu.Item value="new-txt">Lagos</Menu.Item>
+                  <Menu.Item value="new-file">Abuja</Menu.Item>
+                  <Menu.Item value="new-win">Benin</Menu.Item>
+                  <Menu.Item value="open-file">Kaduna</Menu.Item>
+                  <Menu.Item value="export">Ogun</Menu.Item>
                 </Menu.Content>
               </Menu.Positioner>
             </Portal>
@@ -114,11 +111,11 @@ export default function Home() {
         <Separator />
 
         {/* Card */}
-         <SimpleGrid columns={[1, 2, 3]}>
-      {ticketData.map((ticket, index) => (
-        <TicketCard key={index} {...ticket} />
-      ))}
-    </SimpleGrid>
+        <SimpleGrid columns={[1, 2, 3]} spaceY={5}>
+          {ticketData.map((ticket, index) => (
+            <TicketCard key={index} {...ticket} />
+          ))}
+        </SimpleGrid>
       </Stack>
     </Stack>
   );
