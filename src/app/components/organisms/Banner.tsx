@@ -25,7 +25,12 @@ const Banner = () => {
           </Text>
         </Box>
 
-        <Button colorPalette={"cyan"} width={"150px"}>
+        <Button
+          bg="red.700"
+          _hover={{ bg: "red.400" }}
+          variant="solid"
+          width={"150px"}
+        >
           Get Started
         </Button>
       </Stack>

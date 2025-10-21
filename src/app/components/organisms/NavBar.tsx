@@ -1,10 +1,15 @@
-import { Box, Button, HStack, Text } from "@chakra-ui/react";
+import { Box, Button, HStack, Image } from "@chakra-ui/react";
 import React from "react";
 
 const NavBar = () => {
   return (
     <HStack justifyContent={"space-between"}>
-      <Text>Logo</Text>
+      <Image
+        src="/images/logo.png"
+        alt="ReSellr Logo"
+        width="130px"
+        height="auto"
+      />
 
       {/* Links */}
       <Box
@@ -12,7 +17,7 @@ const NavBar = () => {
         display={"flex"}
         flexDirection={"row"}
         alignItems={"center"}
-        gap={2}
+        gap={5}
         fontSize={"md"}
       >
         <li>Home</li>
@@ -20,10 +25,11 @@ const NavBar = () => {
         <li>Contact</li>
 
         <Button
-          size={"md"}
+          size={"sm"}
           rounded={"md"}
-          bg={"white"}
-          color={"black"}
+          bg={"red.700"}
+          _hover={{ bg: "red.200", color: "white" }}
+          color={"white"}
           variant="outline"
         >
           Login

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./lib/chakraProviders";
 import NavBar from "./components/organisms/NavBar";
 import { Box } from "@chakra-ui/react";
+import Footer from "./components/organisms/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
             <NavBar />
             {children}
           </Box>
+          <Footer />
         </Providers>
       </body>
     </html>
