@@ -22,50 +22,114 @@ const CreateTicket = () => {
   const [activeTab, setActiveTab] = useState("movies");
 
   return (
-    <Box p={8} maxW="800px" mx="auto">
+    <Box
+      p={{ base: 4, md: 8 }}
+      maxW="800px"
+      mx="auto"
+      w="full"
+      bg="white"
+      rounded="xl"
+      shadow="sm"
+    >
       <TabsRoot
         value={activeTab}
         onValueChange={(details) => setActiveTab(details.value)}
         variant="enclosed"
         colorPalette="red"
       >
-        <TabsList justifyContent="space-between" overflowX="auto">
-          <TabsTrigger value="movies">
-            <BiSolidCameraMovie /> Movies
-          </TabsTrigger>
-          <TabsTrigger value="airtime">
-            <GiNetworkBars /> Airtime
-          </TabsTrigger>
-          <TabsTrigger value="airplane">
-            <GiCommercialAirplane /> Airplane
-          </TabsTrigger>
-          <TabsTrigger value="concerts">
-            <IoTicket /> Concert
-          </TabsTrigger>
-          <TabsTrigger value="train">
-            <IoMdTrain /> Train
-          </TabsTrigger>
-        </TabsList>
+        {/* Responsive Tabs List */}
+        <Box overflowX="auto" w="full">
+          <TabsList
+            display="flex"
+            justifyContent={{ base: "flex-start", md: "space-between" }}
+            minW="max-content"
+            gap={{ base: 2, md: 4 }}
+            pb={2}
+          >
+            <TabsTrigger
+              value="movies"
+              display="flex"
+              alignItems="center"
+              gap={2}
+              px={{ base: 3, md: 4 }}
+              py={2}
+              whiteSpace="nowrap"
+            >
+              <BiSolidCameraMovie size={18} /> Movies
+            </TabsTrigger>
 
-        <TabsContent value="movies">
-          <MovieForm />
-        </TabsContent>
+            <TabsTrigger
+              value="airtime"
+              display="flex"
+              alignItems="center"
+              gap={2}
+              px={{ base: 3, md: 4 }}
+              py={2}
+              whiteSpace="nowrap"
+            >
+              <GiNetworkBars size={18} /> Airtime
+            </TabsTrigger>
 
-        <TabsContent value="airtime">
-          <AirtimeForm />
-        </TabsContent>
+            <TabsTrigger
+              value="airplane"
+              display="flex"
+              alignItems="center"
+              gap={2}
+              px={{ base: 3, md: 4 }}
+              py={2}
+              whiteSpace="nowrap"
+            >
+              <GiCommercialAirplane size={18} /> Airplane
+            </TabsTrigger>
 
-        <TabsContent value="airplane">
-          <AirplaneForm />
-        </TabsContent>
+            <TabsTrigger
+              value="concerts"
+              display="flex"
+              alignItems="center"
+              gap={2}
+              px={{ base: 3, md: 4 }}
+              py={2}
+              whiteSpace="nowrap"
+            >
+              <IoTicket size={18} /> Concert
+            </TabsTrigger>
 
-        <TabsContent value="concerts">
-          <ConcertForm />
-        </TabsContent>
+            <TabsTrigger
+              value="train"
+              display="flex"
+              alignItems="center"
+              gap={2}
+              px={{ base: 3, md: 4 }}
+              py={2}
+              whiteSpace="nowrap"
+            >
+              <IoMdTrain size={18} /> Train
+            </TabsTrigger>
+          </TabsList>
+        </Box>
 
-        <TabsContent value="train">
-          <TrainForm />
-        </TabsContent>
+        {/* Tabs Content */}
+        <Box mt={6}>
+          <TabsContent value="movies">
+            <MovieForm />
+          </TabsContent>
+
+          <TabsContent value="airtime">
+            <AirtimeForm />
+          </TabsContent>
+
+          <TabsContent value="airplane">
+            <AirplaneForm />
+          </TabsContent>
+
+          <TabsContent value="concerts">
+            <ConcertForm />
+          </TabsContent>
+
+          <TabsContent value="train">
+            <TrainForm />
+          </TabsContent>
+        </Box>
       </TabsRoot>
     </Box>
   );

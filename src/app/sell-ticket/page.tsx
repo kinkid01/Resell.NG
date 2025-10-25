@@ -5,9 +5,14 @@ import TicketCarousel from "../components/templates/carousel/TicketCarousel";
 
 const Page = () => {
   return (
-    <HStack my={10}>
-      <CreateTicket />
+    <HStack
+      my={10}
+      display={"flex"}
+      flexDirection={{ base: "column", md: "row" }}
+    >
       <TicketCarousel />
+      <CreateTicket />
+      
     </HStack>
   );
 };

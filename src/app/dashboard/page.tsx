@@ -117,46 +117,48 @@ const Page = () => {
 
         <Separator my={4} />
 
-        {/* Transactions Table */}
         <Box bg="white" rounded="2xl" shadow="sm" p={6}>
           <Heading size="md" mb={4}>
             Recent Transactions
           </Heading>
 
-          <Table.Root size="md" variant="outline">
-            <Table.Header>
-              <Table.Row bg="gray.100">
-                <Table.ColumnHeader>Ticket</Table.ColumnHeader>
-                <Table.ColumnHeader>Buyer</Table.ColumnHeader>
-                <Table.ColumnHeader>Status</Table.ColumnHeader>
-                <Table.ColumnHeader>Amount</Table.ColumnHeader>
-                <Table.ColumnHeader>Date</Table.ColumnHeader>
-              </Table.Row>
-            </Table.Header>
-
-            <Table.Body>
-              {transactions.map((tx) => (
-                <Table.Row key={tx.id}>
-                  <Table.Cell fontWeight="medium">{tx.ticket}</Table.Cell>
-                  <Table.Cell>{tx.buyer}</Table.Cell>
-                  <Table.Cell>
-                    <Badge
-                      colorPalette={
-                        tx.status === "Completed" ? "green" : "orange"
-                      }
-                      variant="subtle"
-                      rounded="full"
-                      px={2}
-                    >
-                      {tx.status}
-                    </Badge>
-                  </Table.Cell>
-                  <Table.Cell>{tx.amount}</Table.Cell>
-                  <Table.Cell>{tx.date}</Table.Cell>
+          {/* Responsive Scroll Wrapper */}
+          <Box overflowX={{ base: "auto", md: "visible" }}>
+            <Table.Root size="md" variant="outline" minW="600px">
+              <Table.Header>
+                <Table.Row bg="gray.100">
+                  <Table.ColumnHeader>Ticket</Table.ColumnHeader>
+                  <Table.ColumnHeader>Buyer</Table.ColumnHeader>
+                  <Table.ColumnHeader>Status</Table.ColumnHeader>
+                  <Table.ColumnHeader>Amount</Table.ColumnHeader>
+                  <Table.ColumnHeader>Date</Table.ColumnHeader>
                 </Table.Row>
-              ))}
-            </Table.Body>
-          </Table.Root>
+              </Table.Header>
+
+              <Table.Body>
+                {transactions.map((tx) => (
+                  <Table.Row key={tx.id}>
+                    <Table.Cell fontWeight="medium">{tx.ticket}</Table.Cell>
+                    <Table.Cell>{tx.buyer}</Table.Cell>
+                    <Table.Cell>
+                      <Badge
+                        colorPalette={
+                          tx.status === "Completed" ? "green" : "orange"
+                        }
+                        variant="subtle"
+                        rounded="full"
+                        px={2}
+                      >
+                        {tx.status}
+                      </Badge>
+                    </Table.Cell>
+                    <Table.Cell>{tx.amount}</Table.Cell>
+                    <Table.Cell>{tx.date}</Table.Cell>
+                  </Table.Row>
+                ))}
+              </Table.Body>
+            </Table.Root>
+          </Box>
         </Box>
 
         {/* CTA */}

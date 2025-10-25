@@ -115,17 +115,18 @@ const NavBar = () => {
         </HStack>
 
         {/* Mobile Hamburger */}
-        <IconButton
-          aria-label="Open menu"
-          variant="ghost"
-          display={{ base: "flex", md: "none" }}
-          onClick={onToggle}
-        >
-          {open ? <FaTimes /> : <FaBars />}
-        </IconButton>
+
+        <HStack display={{ base: "flex", md: "none" }}>
+          <IconButton aria-label="Open menu" variant="ghost" onClick={onToggle}>
+            {open ? <FaTimes /> : <FaBars />}
+          </IconButton>
+
+          <ProfileMenu />
+        </HStack>
       </HStack>
 
       {/* Mobile Dropdown */}
+
       <MotionBox
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
@@ -148,7 +149,6 @@ const NavBar = () => {
               Login
             </Button>
           </Link>
-          <ProfileMenu />
         </VStack>
       </MotionBox>
     </Box>
