@@ -43,7 +43,7 @@ const Footer = () => {
             <VStack align="flex-start" gap={2}>
               <Text fontWeight="semibold">Platform</Text>
               <Link href="#">Browse Tickets</Link>
-              <Link href="#">Sell Your Ticket</Link>
+              <Link href="/sell-ticket">Sell Your Ticket</Link>
               <Link href="#">Escrow System</Link>
             </VStack>
 

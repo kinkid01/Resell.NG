@@ -11,7 +11,7 @@ const Searchbar = () => {
           Search
         </Button>
       }
-      width={"500px"}
+      width={{ base: "350px", md: "500px" }}
     >
       <Input placeholder="Search contacts" />
     </InputGroup>

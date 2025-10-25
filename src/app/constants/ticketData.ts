@@ -71,4 +71,16 @@ export const ticketData = [
     category: "Concert",
     location: "Abuja",
   },
+  {
+    img: "/images/movie.jpg",
+    title: "Wankanda",
+    date: "14th July, 2025",
+    marketPrice: "4,000",
+    discountPrice: "2,500",
+    rating: "3",
+    name: "Mike",
+    transactions: "10",
+    category: "Movie",
+    location: "Abuja",
+  },
 ];

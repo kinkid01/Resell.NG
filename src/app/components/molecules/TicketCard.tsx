@@ -131,7 +131,7 @@ const TicketCard: React.FC<TicketCardProps> = ({
         <Button
           width="full"
           bg="red.700"
-          _hover={{ bg: "red.400" }}
+          _hover={{ bg: "red.800" }}
           variant="solid"
         >
           Buy now via Escrow

@@ -23,10 +23,14 @@ export default function Home() {
 
       {/* Filters */}
 
-      <HStack justifyContent={"space-between"}>
+      <HStack
+        justifyContent={"space-between"}
+        display={"flex"}
+        flexDirection={{ base: "column", md: "row" }}
+      >
         <Searchbar />
 
-        <HStack>
+        <HStack mt={{ base: 3, md: "" }}>
           {/* ticket */}
           <Menu.Root>
             <Menu.Trigger asChild>

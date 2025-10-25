@@ -32,7 +32,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <Box px={10} pt={5}>
+          <Box
+            px={{ base: 2, md: 10 }}
+            pt={5}
+            width={"100%"}
+            overflowX={"hidden"}
+          >
             <NavBar />
             {children}
           </Box>

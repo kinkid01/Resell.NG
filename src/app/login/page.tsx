@@ -26,7 +26,7 @@ const Page = () => {
   return (
     <Container maxW="lg" py={10}>
       {/* ---- Logo ---- */}
-      <Center mb={8}>
+      <Center mb={8} display={{ base: "none", md: "block" }}>
         <Flex align="center" gap={3}>
           <Image
             src="/images/logo.png"
@@ -47,7 +47,9 @@ const Page = () => {
         borderColor="gray.100"
       >
         <Stack textAlign="center" gap={2} mb={8}>
-          <Heading size="md">Welcome Back</Heading>
+          <Heading size="2xl" fontWeight={"60px"}>
+            Welcome Back
+          </Heading>
           <Text color="gray.600">Sign in to continue to your account</Text>
         </Stack>
 
